@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images1.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center position-fixed h-100 w-100 bg-white" id="loadingScreen">
+        <div class="display-1 text-black">
+            <span class="spinner-border border-dark bg-white position-fixed"></span>
+            <img src="images1.jpg" alt="" class="position-absolute mb-n2 text-center" style="height:4rem;">
+        </div>
+    </div>
+
+    <script>
+        let loadingScreen = document.getElementById('loadingScreen');
+        let loadingText = '...';
+        let loadingIndex = 0;
+
+        loadingInterval = setInterval(function () {
+            if (loadingIndex == 3) {
+                loadingIndex = 0;
+                loadingScreen.firstElementChild.firstElementChild.innerText = '';
+            } else {
+                loadingScreen.firstElementChild.firstElementChild.innerText += loadingText[loadingIndex];
+                loadingIndex++;
+            }
+        }, 0.25 * 1000);
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                loadingScreen.classList.add('d-none');
+                clearInterval(loadingInterval);
+            }, 1.80 * 1000);
+        });
+    </script>
+
+
+
+
+
+
+    <div class="navbar navbar-dark" aria-label="First navbar example">
+        <div class="container-fluid bg-white">
+            <div class="row row-cols-lg-3 row-cols-sm-4 row justify-content-start ">
+                <img src="images1.jpg" alt="">
+              </div>
+          <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+    
+        <div class="collapse navbar-collapse bg-dark" id="navbarsExample01">
+            <ul class="navbar-nav me-auto mb-2 p-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+      </div>
+
+      <div class="bg-dark">
+          <div class="container-fluid">
+              <div class="row text-white text-center">
+                  <div class="col bg-secondary p-5">
+                      Salam,
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam porro ipsam ullam ducimus neque cumque qui aut, maiores architecto ipsa pariatur vel autem eaque sed aspernatur asperiores. Vero, eaque quia.
+                  </div>
+                  <div class="col bg-danger p-5">
+                      Sagbol,
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, obcaecati? Provident neque ratione molestiae perspiciatis nemo aspernatur maiores, repudiandae cumque mollitia et iusto alias voluptatum recusandae dolore veniam adipisci odio.
+                  </div>
+                  <div class="col p-5">
+                      Minnetdar,
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate necessitatibus ratione vitae ullam dolorum voluptatem incidunt distinctio accusamus non blanditiis consequuntur, reiciendis quam rem itaque placeat repellendus. Temporibus, reprehenderit aperiam!
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
